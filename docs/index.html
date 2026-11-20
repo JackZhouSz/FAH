@@ -32,12 +32,17 @@
   .subtitle { font-size: 1.25rem; color: var(--muted); margin: 0 0 18px; }
   .authors { font-size: 1.05rem; margin: 0 0 4px; }
   .affil { color: var(--muted); font-size: 0.95rem; margin: 0 0 22px; }
+  .affil a { color: var(--muted); }
   .links { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
   .links a {
     display: inline-block; padding: 8px 20px; border-radius: 999px;
     background: var(--fg); color: #fff; text-decoration: none; font-weight: 600; font-size: 0.95rem;
   }
   .links a:hover { opacity: 0.88; }
+  .links a.sec { background: #fff; color: var(--fg); border: 1.5px solid var(--fg); padding: 6.5px 18px; }
+  .links .sep { width: 1px; background: var(--line); margin: 4px 6px; padding: 0; border-radius: 0; }
+  .links span.grp { display: inline-flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
+  @media (max-width: 640px) { .links .sep { display: none; } }
   section { margin-top: 48px; }
   h2 { font-size: 1.5rem; margin: 0 0 14px; padding-bottom: 6px; border-bottom: 1px solid var(--line); }
   h3 { font-size: 1.1rem; margin: 28px 0 8px; }
@@ -102,12 +107,13 @@
   <p class="authors">Jinkun Cao</p>
   <p class="affil"><a href="https://www.jinkuncao.com">www.jinkuncao.com</a></p>
   <nav class="links">
-    <a href="https://arxiv.org/pdf/2611.07711">Paper</a>
+    <a href="https://arxiv.org/abs/2611.07711">Paper (arXiv)</a>
     <a href="https://github.com/noahcao/FAH">Code</a>
     <a href="https://huggingface.co/noahcao/FAH">Models</a>
     <a href="#bibtex">BibTeX</a>
+    <span class="sep" aria-hidden="true"></span>
+    <span class="grp"><a class="sec" href="https://www.jinkuncao.com/FAB/">FAB (body)</a><a class="sec" href="https://github.com/noahcao/FAB">FAB code</a></span>
   </nav>
-  <p class="affil" style="margin-top: 12px;">Body: see our companion model FAB (<a href="https://www.jinkuncao.com/FAB/">project page</a>, <a href="https://github.com/noahcao/FAB">code</a>).</p>
 </header>
 
 
